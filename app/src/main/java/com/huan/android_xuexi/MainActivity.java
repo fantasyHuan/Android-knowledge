@@ -16,4 +16,8 @@ public class MainActivity extends Activity {
         Intent intent=new Intent(MainActivity.this,_Activity.class);
         startActivity(intent);
     }
+    protected void buttonText(View view){
+        Intent intent=new Intent(MainActivity.this,_text.class);
+        startActivity(intent);
+    }
 }

@@ -1,3 +1,18 @@
 <resources>
     <string name="app_name">Android-Xuexi</string>
+    <string name="TextView的属性说明">
+        android:textSize：文字大小，单位sp \n
+        android:textColor：文字颜色 \n
+        android:singleLine：文本单行是否显示 \n
+        android:lines：控件的文本行数 \n
+        android:textAllCaps：文本内容字母是否全大写 \n
+        android:textColorHighlight：被选中文字的底色，默认为蓝色 \n
+        android:textStyle：字体风格bold:加粗 italic:倾斜(可设置多个，用 | 隔开) \n
+        android:ellipsize：文本数据超出了屏幕的宽度的省略方式（start:省略开始 middle:省略中间  end:省略末尾（默认）\n
+        android:autoLink  指定文本超链接 \n
+           {android:shadowColor  设置文本框文本的阴影颜色 \n
+         -{android:shadowDx  设置文本框文本的阴影在水平方向的偏移 \n
+         -{android:shadowDy  设置文本框文本的阴影在垂直方向的偏移 \n
+          {android:shadowRadius 设置文本框文本的阴影的模糊程度，该值越大，阴影越模糊 \n
+</string>
 </resources>
