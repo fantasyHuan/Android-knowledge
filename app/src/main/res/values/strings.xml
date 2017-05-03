@@ -1,6 +1,8 @@
 <resources>
     <string name="app_name">Android-Xuexi</string>
     <string name="TextView的属性说明">
+        TextView的属性说明\n
+        \n
         android:textSize：文字大小，单位sp \n
         android:textColor：文字颜色 \n
         android:singleLine：文本单行是否显示 \n
@@ -9,10 +11,34 @@
         android:textColorHighlight：被选中文字的底色，默认为蓝色 \n
         android:textStyle：字体风格bold:加粗 italic:倾斜(可设置多个，用 | 隔开) \n
         android:ellipsize：文本数据超出了屏幕的宽度的省略方式（start:省略开始 middle:省略中间  end:省略末尾（默认）\n
+        android:typeface：设置字型（normal:默认, sans:非衬线字体, serif:衬线字体,monospace:等宽字体）
         android:autoLink  指定文本超链接 \n
-           {android:shadowColor  设置文本框文本的阴影颜色 \n
-         -{android:shadowDx  设置文本框文本的阴影在水平方向的偏移 \n
-         -{android:shadowDy  设置文本框文本的阴影在垂直方向的偏移 \n
-          {android:shadowRadius 设置文本框文本的阴影的模糊程度，该值越大，阴影越模糊 \n
+        {android:shadowColor  设置文本框文本的阴影颜色 \n
+         {android:shadowDx  设置文本框文本的阴影在水平方向的偏移 \n
+         {android:shadowDy  设置文本框文本的阴影在垂直方向的偏移 \n
+        {android:shadowRadius 设置文本框文本的阴影的模糊程度，该值越大，阴影越模糊 \n
 </string>
+    <string name="EditText属性说明">
+        EditText属性说明\n
+        \n
+        android:hint：提示性文本\n
+        android:textColorHint：提示语的颜色\n
+        android:maxLines：最大行数为多少，当输入的内容超过这个行数时，文本就会向上滚动\n
+        android:maxLength：最大字数限制\n
+        android:numeric：只接受数字（integer:正整数、signed:带符号整数正负、decimal:浮点数）
+        android:textCursorDrawable：设置光标颜色\n
+        android:selectAllOnFocus：如果文本框的内容可选择，设置是否当他获得焦点时自动选中所有文本\n
+    </string>
+    <string name="windowSoftInputMode属性说明">
+        针对于Activity,属于AndroidManifest.xml的标签Activity的属性，以下为属性值
+        stateUnspecified：（系统默认）系统将选择一个合适的状态或依赖于主题的设置决定输入法状态\n
+        stateUnchanged：当新的activity出现时，软键盘状态设置将取决于上一个activity的设定\n
+        stateHidden：用户转跳新的activity时，软键盘是隐藏的\n
+        stateAlwaysHidden：当该Activity主窗口获取焦点时，软键盘也总是被隐藏的\n
+        stateVisible：软键盘是可见的\n
+        stateAlwaysVisible：用户转跳新的activity时，上一个activity的软键盘依然是显示的状态\n
+        adjustUnspecified：默认设置，通常由系统自行决定是隐藏还是显示\n
+        adjustResize：调整屏幕的大小以此腾出软键盘\n
+        adjustPan：移动窗口以便内容供用户可见，保证内容不被软键盘覆盖\n
+    </string>
 </resources>

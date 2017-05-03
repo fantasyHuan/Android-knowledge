@@ -135,7 +135,7 @@
         android:layout_height="match_parent">
 
         <ScrollView
-            android:layout_width="wrap_content"
+            android:layout_width="match_parent"
             android:layout_height="wrap_content">
 
             <LinearLayout
@@ -143,101 +143,67 @@
                 android:layout_height="wrap_content"
                 android:orientation="vertical">
 
-                <EditText
-                    android:id="@+id/textPersonName"
-                    android:layout_width="361dp"
-                    android:layout_height="wrap_content"
-                    android:ems="10"
-                    android:inputType="textPersonName"/>
-
-                <EditText
-                    android:id="@+id/time"
+                <TextView
+                    android:id="@+id/textView3"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:ems="10"
-                    android:inputType="time" />
+                    android:lines="8"
+                    android:text="@string/EditText属性说明" />
 
-                <EditText
-                    android:id="@+id/date"
+                <TextView
+                    android:id="@+id/textView6"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:ems="10"
-                    android:inputType="date" />
+                    android:background="#686868"
+                    android:text="android:windowSoftInputMode--activity主窗口与软键盘的交互模式" />
 
-                <EditText
-                    android:id="@+id/number"
+                <TextView
+                    android:id="@+id/textView7"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:ems="10"
+                    android:background="#aeadad"
+                    android:text="@string/windowSoftInputMode属性说明" />
+
+                <TextView
+                    android:id="@+id/textView4"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="#69996c"
+                    android:text="android:inputType：指定文本框的类型" />
+
+                <EditText
+
+                    android:id="@+id/editText2"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:inputType="textPersonName"
+                    android:hint="textPersonName" />
+
+                <EditText
+                    android:id="@+id/editText6"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:hint="textPassword"
+                    android:inputType="textPassword" />
+
+                <!--android:ems作为EditText默认生成的属性，指需要编辑的字符串长度-->
+                <!--只有在android:layout_width=“wrap_content”时，才会显示-->
+                <!--如果是android:layout_width=“match_parent”时，则不会有变化-->
+                <EditText
+                    android:id="@+id/editText7"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:ems="5"
+                    android:maxLength="10"
                     android:inputType="number" />
 
                 <EditText
-                    android:id="@+id/numberPassword"
+                    android:id="@+id/editText8"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:ems="10"
-                    android:inputType="numberPassword" />
-
-                <EditText
-                    android:id="@+id/numberSigned"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:ems="10"
+                    android:maxLength="12"
                     android:inputType="numberSigned" />
 
-                <AutoCompleteTextView
-                    android:id="@+id/autoCompleteTextView"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:text="AutoCompleteTextView" />
-
-                <EditText
-                    android:id="@+id/textPostalAddress"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:ems="10"
-                    android:inputType="textPostalAddress" />
-
-                <MultiAutoCompleteTextView
-                    android:id="@+id/multiAutoCompleteTextView"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:text="MultiAutoCompleteTextView" />
-
-                <EditText
-                    android:id="@+id/textEmailAddress"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:ems="10"
-                    android:inputType="textEmailAddress" />
-
-                <EditText
-                    android:id="@+id/phone"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:ems="10"
-                    android:inputType="phone" />
-
-                <EditText
-                    android:id="@+id/textMultiLine"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:ems="10"
-                    android:inputType="textMultiLine" />
-
-                <EditText
-                    android:id="@+id/numberDecimal"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:ems="10"
-                    android:inputType="numberDecimal" />
-
-                <EditText
-                    android:id="@+id/textPassword"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:ems="10"
-                    android:inputType="textPassword" />
             </LinearLayout>
         </ScrollView>
     </HorizontalScrollView>
