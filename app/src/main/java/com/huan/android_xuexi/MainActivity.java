@@ -20,4 +20,8 @@ public class MainActivity extends Activity {
         Intent intent=new Intent(MainActivity.this,_text.class);
         startActivity(intent);
     }
+    protected  void buttonFragment(View view){
+        Intent intent=new Intent(MainActivity.this,_Fragment.class);
+        startActivity(intent);
+    }
 }

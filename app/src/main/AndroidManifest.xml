@@ -24,6 +24,10 @@
             android:name="._text"
             android:windowSoftInputMode="stateHidden">
         </activity>
+
+        <activity
+            android:name="._Fragment">
+        </activity>
     </application>
 
 
