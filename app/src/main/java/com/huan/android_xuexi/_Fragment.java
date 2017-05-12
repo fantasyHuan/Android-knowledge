@@ -44,7 +44,7 @@ public class _Fragment extends Activity{
     /**
      * 按钮触发：将布局控件上的替换为新的fragment
      *
-     * ft.replace(int i,Fragment fragment);
+     * FragmentTransaction.replace(int i,Fragment fragment);
      * --相当于删除（remove()）布局控件上的所有fragment，然后再添加（add()）新fragment
      * 注：不管布局控件上有没有fragment
      * int i-->替换Fragment所用的布局控件ID
@@ -61,7 +61,6 @@ public class _Fragment extends Activity{
      */
     protected  void fragment_button2(View view){
         FragmentTransaction ft = fm.beginTransaction();
-
         ft.remove(f2);
         ft.commit();
     }

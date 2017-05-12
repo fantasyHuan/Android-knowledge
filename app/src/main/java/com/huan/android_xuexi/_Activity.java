@@ -55,7 +55,7 @@ public class _Activity  extends Activity{
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.layout_activity);
-        Log.i("tag","调用了-->onCreate");
+        Log.i("Activity生命周期","调用了-->onCreate");
     }
 
     /**
@@ -64,7 +64,7 @@ public class _Activity  extends Activity{
      */
     protected void onStart() {
         super.onStart();
-        Log.i("tag","调用了-->onStart");
+        Log.i("Activity生命周期","调用了-->onStart");
     }
 
     /**
@@ -73,7 +73,7 @@ public class _Activity  extends Activity{
      */
     protected void onResume() {
         super.onResume();
-        Log.i("tag","调用了-->onResume");
+        Log.i("Activity生命周期","调用了-->onResume");
     }
 
     /**
@@ -82,7 +82,7 @@ public class _Activity  extends Activity{
      */
     protected void onPause() {
         super.onPause();
-        Log.i("tag","调用了-->onPause");
+        Log.i("Activity生命周期","调用了-->onPause");
     }
 
     /**
@@ -91,7 +91,7 @@ public class _Activity  extends Activity{
      */
     protected void onStop() {
         super.onStop();
-        Log.i("tag","调用了-->onStop");
+        Log.i("Activity生命周期","调用了-->onStop");
     }
 
     /**
@@ -100,7 +100,7 @@ public class _Activity  extends Activity{
      */
     protected void onDestroy() {
         super.onDestroy();
-        Log.i("tag","调用了-->onDestroy");
+        Log.i("Activity生命周期","调用了-->onDestroy");
     }
 
     /**
@@ -109,7 +109,7 @@ public class _Activity  extends Activity{
      */
     protected void onRestart() {
         super.onRestart();
-        Log.i("tag","调用了-->onRestart");
+        Log.i("Activity生命周期","调用了-->onRestart");
     }
 
     /**
@@ -121,7 +121,7 @@ public class _Activity  extends Activity{
      */
     protected void onSaveInstanceState(Bundle outState) {
         super.onSaveInstanceState(outState);
-        Log.i("tag","调用了-->onSaveInstanceState");
+        Log.i("Activity","调用了-->onSaveInstanceState");
     }
 
     /**
@@ -130,7 +130,7 @@ public class _Activity  extends Activity{
      */
     protected void onRestoreInstanceState(Bundle savedInstanceState) {
         super.onRestoreInstanceState(savedInstanceState);
-        Log.i("tag","调用了-->onRestoreInstanceState");
+        Log.i("Activity","调用了-->onRestoreInstanceState");
     }
 
 
