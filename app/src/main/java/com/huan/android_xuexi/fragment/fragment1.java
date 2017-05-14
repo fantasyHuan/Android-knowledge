@@ -14,6 +14,6 @@ import com.huan.android_xuexi.R;
 
 public class fragment1 extends Fragment{
     public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
-        return inflater.inflate(R.layout.fragment_tian, container, false);
+        return inflater.inflate(R.layout.fragment_1, container, false);
     }
 }

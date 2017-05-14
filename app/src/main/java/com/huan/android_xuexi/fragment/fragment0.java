@@ -3,6 +3,7 @@ package com.huan.android_xuexi.fragment;
 import android.app.Fragment;
 import android.content.Context;
 import android.os.Bundle;
+import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -33,6 +34,7 @@ public class fragment0 extends Fragment {
      */
     public void onAttach(Context context) {
         super.onAttach(context);
+        Log.i("Fragment生命周期","调用了-->onAttach");
     }
 
     /**
@@ -56,6 +58,7 @@ public class fragment0 extends Fragment {
      */
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
+        Log.i("Fragment生命周期","调用了-->onCreate");
     }
 
     /**
@@ -64,6 +67,7 @@ public class fragment0 extends Fragment {
      */
     public void onActivityCreated(Bundle savedInstanceState) {
         super.onActivityCreated(savedInstanceState);
+        Log.i("Fragment生命周期","调用了-->onActivityCreated");
     }
 
     /**
@@ -72,6 +76,7 @@ public class fragment0 extends Fragment {
      */
     public void onStart() {
         super.onStart();
+        Log.i("Fragment生命周期","调用了-->onStart");
     }
 
     /**
@@ -80,6 +85,7 @@ public class fragment0 extends Fragment {
      */
     public void onResume() {
         super.onResume();
+        Log.i("Fragment生命周期","调用了-->onResume");
     }
 
     /**
@@ -88,6 +94,7 @@ public class fragment0 extends Fragment {
      */
     public void onPause() {
         super.onPause();
+        Log.i("Fragment生命周期","调用了-->onPause");
     }
 
     /**
@@ -96,6 +103,7 @@ public class fragment0 extends Fragment {
      */
     public void onStop() {
         super.onStop();
+        Log.i("Fragment生命周期","调用了-->onStop");
     }
 
     /**
@@ -103,6 +111,7 @@ public class fragment0 extends Fragment {
      */
     public void onDestroyView() {
         super.onDestroyView();
+        Log.i("Fragment生命周期","调用了-->onDestroyView");
     }
 
     /**
@@ -112,6 +121,7 @@ public class fragment0 extends Fragment {
      */
     public void onDestroy() {
         super.onDestroy();
+        Log.i("Fragment生命周期","调用了-->onDestroy");
     }
 
     /**
@@ -120,5 +130,6 @@ public class fragment0 extends Fragment {
      */
     public void onDetach() {
         super.onDetach();
+        Log.i("Fragment生命周期","调用了-->onDetach");
     }
 }

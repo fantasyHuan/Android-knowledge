@@ -5,6 +5,7 @@
         \n
         android:textSize：文字大小，单位sp \n
         android:textColor：文字颜色 \n
+        android:background：控件背景色\n
         android:singleLine：文本单行是否显示 \n
         android:lines：控件的文本行数 \n
         android:textAllCaps：文本内容字母是否全大写 \n
@@ -78,6 +79,94 @@
   旋转屏幕方向系统销毁Activity，并调用onSaveInstanceState()保存状态数据，\n
   在屏幕切换之后重新创建Activity，并调用onRestoreInstanceState()恢复状态数据。\n
   注：onSaveInstanceState()和onRestoreInstanceState()并不属于Activity生命周期的方法
+    </string>
+
+    <string name="Fragment生命周期">
+       创建该fragment的View控件\n
+        创建该fragment的视图，并返回给调用者Activity\n
+       --onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {\n
+        return inflater.inflate(layout, container, false);\n
+        \n
+        销毁Fragment所包含的View控件\n
+        --onDestroyView() \n
+        \n
+        从Activity中删除Fragment时将会调用\n
+       调用后，Fragment就不再与Activity绑定，不再拥有视图层次结构，所有资源将会被释放。\n
+        --onDetach()\n
+        \n
+        当Fragment所在的Activity的OnCreate()结束后，会调用此方法\n
+        --onActivityCreated\n
+        \n
+        当Fragment被添加到Activity时将会被调用\n
+        --onAttach(Context context)\n
+        \n
+    </string>
+
+    <string name="Fragment事物_事务操作">
+           Fragment常用的三个类：\n
+        android.app.Fragment 主要用于定义Fragment  \n
+        android.app.FragmentManager 主要用于在Activity中操作Fragment  \n
+        android.app.FragmentTransaction 保证一些列Fragment操作的原子性  \n
+        首先：\n
+        1.实例化Fragment类\n
+        2.FragmentManager fm = getFragmentManager();\n
+        3.FragmentTransaction ft = fm.beginTransaction();\n
+        4.添加事务，然后提交事务（ft.commit();） \n
+        注：每次添加事务，Fragment需要重新new,而FragmentTransaction需要重新beginTransaction()   \n
+        \n
+        ===============\n
+        *获得Fragment：
+        *manager.findFragmentById(id);      //用于静态添加Fragment，利用id寻找实例
+        *manager.findFragmentByTag(tag); //用于动态添加Fragment，利用tag寻找实例
+        ===============\n
+       *添加fragment：  \n
+     * FragmentTransaction add(int i,Fragment fragment);\n
+      *---add(R.id.fragment_container, fragment, String s)\n
+     * int i-->添加Fragment所用的布局控件ID\n
+     * Fragment fragment-->Fragment的java文件\n
+      *String s-->tag  （通过findFragmentByTag(tag)获取Fragment实例）
+        ===============\n
+     * 替换：将布局控件上的为新的fragmen
+        *（相当于删除（remove()）布局控件上的所有fragment，然后再添加（add()）新fragment）\n
+     * FragmentTransaction replace(int i,Fragment fragment);\n
+     * 注：不管布局控件上有没有fragment\n
+     * int i-->替换Fragment所用的布局控件ID\n
+     * Fragment fragment-->Fragment的java文件\n
+       =============== \n
+       *删除指定Fragment\n
+      *FragmentTransaction remove(Fragment fragment);\n
+        ===============\n
+       *将指定的fragment隐藏\n
+        FragmentTransaction hide(Fragment fragment);\n
+        ===============\n
+       *将指定的fragment显示   \n
+        FragmentTransaction show(Fragment fragment);\n
+        detach()：会将view与fragment分离，将此将view从viewtree中删除！而且将fragment从Activity的ADD队列中移除！所以在使用detach()后，使用fragment::isAdded()返回的值是false；但此fragment实例并不会删除，此fragment的状态依然保持着使用，所以在fragmentManager中仍然可以找到，即通过FragmentManager::findViewByTag()仍然是会有值的。\n
+        attach()：显然这个方法与detach()所做的工作相反，它一方面利用fragment的onCreateView()来重建视图，一方面将此fragment添加到ADD队列中;这里最值得注意的地方在这里：由于是将fragment添加到ADD队列，所以只能添加到列队头部，所以attach()操作的结果是，最新操作的页面始终显示在最前面！这也就解释了下面的例子中，为了fragment2 detach()后，当再次attach()后，却跑到了fragment3的前面的原因。还有，由于这里会将fragment添加到Activity的ADD队列中，所以在这里调用fragment::isAdded()将返回True; \n
+        参考了：http://blog.csdn.net/harvic880925/article/details/44948027\n
+        ===============\n
+        回滚：\n
+        ===============\n
+       *添加进回退栈（back stack）,以提交事务（commit()）为单位\n
+       *FragmentTransaction addToBackStack(String tag);\n
+       ===============\n
+       *回滚上一次commit的操作，将最上层的事务弹出栈\n
+      *FragmentManager popBackStack();\n
+       *FragmentManager popBackStack(int id, int flags);\n
+       *FragmentManager popBackStack(String name, int flags);\n
+       *int id-->FragmentTransaction.commit()的返回值。\n
+       *string name-->addToBackStack(String tag)的tag\n
+       *int flags-->0或FragmentManager.POP_BACK_STACK_INCLUSIVE；\n
+       *为0时，除了指定的层数，以上所有层都会退出栈\n
+       *为POP_BACK_STACK_INCLUSIVE时，包括此层数，以上所有层都会退出栈\n
+       ===============\n
+       *获得回退栈的数量\n
+       *FragmentManager getBackStackEntryCount();\n
+       ===============\n
+       *获得回退栈的属性\n
+       *BackStackEntry getBackStackEntryAt(int index);\n
+       *int index-->索引值，从0开始\n
+       *\n
     </string>
 
     <!-- TODO: Remove or change this placeholder text -->

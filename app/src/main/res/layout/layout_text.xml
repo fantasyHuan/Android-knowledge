@@ -24,7 +24,6 @@
                     android:id="@+id/textView5"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:lines="15"
                     android:text="@string/TextView的属性说明" />
 
                 <TextView
@@ -93,7 +92,7 @@
                         android:layout_marginStart="47dp"
                         android:layout_toEndOf="@+id/button5"
                         android:layout_toRightOf="@+id/button5"
-                        android:text="横竖居中：\n center_vertical"
+                        android:text="横竖居中：\n center"
                         android:textAllCaps="false" />
 
                     <Button
@@ -147,7 +146,6 @@
                     android:id="@+id/textView3"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:lines="8"
                     android:text="@string/EditText属性说明" />
 
                 <TextView
